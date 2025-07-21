@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+//1
+ var a = 10;
+        document.write("Result:<br>");
+        document.write("The value of a is: " + a + "<br>");
+        document.write("..................................................<br><br>");
+
+        document.write("The value of ++a is: " + (++a) + "<br>");
+        document.write("Now the value of a is: " + a + "<br><br>");
+
+        document.write("The value of a++ is: " + (a++) + "<br>");
+        document.write("Now the value of a is: " + a + "<br><br>");
+
+        document.write("The value of --a is: " + (--a) + "<br>");
+        document.write("Now the value of a is: " + a + "<br><br>");
+
+        document.write("The value of a-- is: " + (a--) + "<br>");
+        document.write("Now the value of a is: " + a + "<br>");
+
+
+
+
+//2
+var a = 2, b = 1;
+var result = --a - --b + ++b + b--;
+document.write("<br><br><br>")
+document.write("a is " + a+ "<br>");
+document.write("b is " + b+"<br>");
+document.write("result is " + result);
+
+
+
+
+
+//3
+ // Take input from user
+  var name = prompt("Enter your name:");
+
+  // Create greeting message
+  var message = "Hello, " + name + "! Welcome.";
+
+  // Show the message on the page
+  document.getElementById("greeting")
+
+
+
+document.write("<br><br><br>")
+
+
+
+
+
+//4
+// Ask user for a number
+let userInput = prompt("Enter a number for multiplication table:");
+
+// Convert input to number or default to 5
+let number = parseInt(userInput);
+if (isNaN(number)) {
+  number = 5;
+}
+
+// Display the multiplication table in the console
+for (let i = 1; i <= 10; i++) {
+  document.write(number + " x " + i + " = " + (number * i +"<br>"));
+}
+
+
+
+
+
+
+
+
+//5
+// a) Take subject names
+let subject1 = prompt("Enter first subject name:");
+let subject2 = prompt("Enter second subject name:");
+let subject3 = prompt("Enter third subject name:");
+
+// b) Total marks per subject
+const totalMarksPerSubject = 100;
+
+// c + d) Obtained marks from user
+let obtained1 = parseInt(prompt(`Enter obtained marks for ${subject1}`));
+let obtained2 = parseInt(prompt(`Enter obtained marks for ${subject2}`));
+let obtained3 = parseInt(prompt(`Enter obtained marks for ${subject3}`));
+
+// e) Calculate individual percentages
+let percent1 = (obtained1 / totalMarksPerSubject) * 100;
+let percent2 = (obtained2 / totalMarksPerSubject) * 100;
+let percent3 = (obtained3 / totalMarksPerSubject) * 100;
+
+// f) Total marks and percentage
+let totalMarks = totalMarksPerSubject * 3;
+let totalObtained = obtained1 + obtained2 + obtained3;
+let totalPercent = (totalObtained / totalMarks) * 100;
+
+// g) Output in console
+console.log("Subject\tTotal\tObtained\tPercentage");
+document.write(`${subject1}\t100\t${obtained1}\t\t${percent1.toFixed(0)}%`);
+document.write(`${subject2}\t100\t${obtained2}\t\t${percent2.toFixed(0)}%`);
+document.write(`${subject3}\t100\t${obtained3}\t\t${percent3.toFixed(0)}%`);
+document.write(`Total:\t${totalMarks}\t${totalObtained}\t\t${totalPercent.toFixed(0)}%`);
+
+
+
+
+
+
+
+     //6
+    // a) Take subject names
+    var subjecta = prompt("Enter name of first subject:");
+    var subjectb = prompt("Enter name of second subject:");
+    var subjectc = prompt("Enter name of third subject:");
+
+    // b) Total marks for each subject
+    var totalMarksEach = 100;
+
+    // c & d) Take obtained marks
+    var marks1 = prompt("Enter obtained marks for " + subjecta );
+    var marks2 = prompt("Enter obtained marks for " + subjectb );
+    var marks3 = prompt("Enter obtained marks for " + subjectc );
+
+    // e) Total and percentage
+    var totalMarka = totalMarksEach * 3;
+    var obtainedMarks = marks1 + marks2 + marks3;
+    var percentage = (obtainedMarks / totalMarka) * 100;
+
+    document.write("<table border='1' cellpadding='10'>");
+    document.write("<tr><th>Subject</th><th>Total Marks</th><th>Obtained Marks</th><th>Percentage</th></tr>");
+    document.write("<tr><td>" + subjecta + "</td><td>" + totalMarksEach + "</td><td>" + marks1 + "</td><td>" + Math.round((marks1/totalMarksEach)*100) + "%</td></tr>");
+    document.write("<tr><td>" + subjectb + "</td><td>" + totalMarksEach + "</td><td>" + marks2 + "</td><td>" + Math.round((marks2/totalMarksEach)*100) + "%</td></tr>");
+    document.write("<tr><td>" + subjectc + "</td><td>" + totalMarksEach + "</td><td>" + marks3 + "</td><td>" + Math.round((marks3/totalMarksEach)*100) + "%</td></tr>");
+    document.write("<tr><th></th><th>" + totalMarka + "</th><th>" + obtainedMarks + "</th><th>" + Math.round(percentage) + "%</th></tr>");
+    document.write("</table>");
+
+</script>
+
+
+
+
+
+</body>
+</html>
